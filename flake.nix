@@ -7,7 +7,7 @@
       path = ./templates/default;
       description = "A basic Nix project template with a hello world package";
     };
-    
+ 
     # You can also define other templates
     templates.go = {
       path = ./templates/go;
