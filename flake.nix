@@ -5,7 +5,7 @@
     # Define the templates here
  
     # You can also define other templates
-    temlpates.go = {
+    templates.go = {
       path = ./go;
       description = "A Go project template with devShell";
     };
