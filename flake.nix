@@ -1,31 +1,17 @@
 {
-  description = "Golang flake";
+  description = "A template for Nix projects";
 
-  inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-  };
-
-  outputs = { self, nixpkgs }: 
-  let
-    system = "x86_64-linux";
-    pkgs = import nixpkgs { inherit system; };
-  in 
-  {
-    devShells.${system}.default = pkgs.mkShell {
-      buildInputs = with pkgs; [
-        starship
-        go
-        gopls
-        gotools
-        just
-      ];
-      shellHook = ''
-        export SHELL=${ pkgs.lib.getExe pkgs.bash }
-        export PATH=$PATH:$GOPATH/bin
-        eval "$(starship init bash)"
-        export STARSHIP_CONFIG=$PWD/starship.toml
-      '';
+  outputs = { self, nixpkgs }: {
+    # Define the templates here
+    templates.default = {
+      path = ./templates/default;
+      description = "A basic Nix project template with a hello world package";
     };
-      
+    
+    # You can also define other templates
+    templates.go = {
+      path = ./templates/go;
+      description = "A Go project template with devShell";
+    };
   };
 }
