@@ -11,7 +11,7 @@
     };
     
     templates.dotnet = {
-      path = ./dotnet/;
+      path = ./dotnet;
       description = "A dotnet project template with devShell";
     }
 
