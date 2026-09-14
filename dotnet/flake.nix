@@ -12,7 +12,7 @@
       mkDevShell = system:
         let
           pkgs = nixpkgs.legacyPackages.${system};
-          dotnetPkg = pkgs.dotnetCorePackages.sdk_7_0;
+          dotnetPkg = pkgs.dotnetCorePackages.sdk_8_0;
         in
         pkgs.mkShell {
           buildInputs = [
