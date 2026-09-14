@@ -9,6 +9,11 @@
       path = ./go;
       description = "A Go project template with devShell";
     };
+    
+    templates.dotnet = {
+      path = ./dotnet/;
+      description = "A dotnet project template with devShell";
+    }
 
   };
 }
