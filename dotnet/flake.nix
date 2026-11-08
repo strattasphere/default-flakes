@@ -19,7 +19,7 @@
             pkgs.zlib
             pkgs.openssl
             dotnetPkg
-            just 
+            pkg.just 
           ];
 
           NIX_LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [
