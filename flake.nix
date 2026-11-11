@@ -15,5 +15,9 @@
       description = "A dotnet project template with devShell";
     };
 
+    templates.rust = {
+      path = ./rust;
+      description = "A rust project template with devShell";
+    };
   };
 }
