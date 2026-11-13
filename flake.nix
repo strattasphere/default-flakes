@@ -11,7 +11,7 @@
     };
     
     templates.go-svelte = {
-      path = ./go-svelte;
+      path = ./wails3;
       description = "A Go & Svelte project template with devShell";
     };
 
