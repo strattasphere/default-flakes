@@ -1,0 +1,9 @@
+default:
+  just --list
+
+run: 
+  wails3 dev
+
+doct:
+  wails3 doctor
+
