@@ -19,13 +19,17 @@
             pkgs.zlib
             pkgs.openssl
             dotnetPkg
-            pkgs.just 
+            pkgs.roslyn-ls
           ];
 
-          NIX_LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [
+         NIX_LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [
             pkgs.stdenv.cc.cc
             pkgs.zlib
             pkgs.openssl
+            pkgs.icu          # <- the big one for .NET/Roslyn
+            pkgs.krb5         # gssapi, commonly dlopened
+            pkgs.curl
+            pkgs.dotnetCorePackages.runtime_10_0  # harmless, sometimes picks up shared bits
           ];
 
           NIX_LD = "${pkgs.stdenv.cc.libc}/bin/ld.so";
