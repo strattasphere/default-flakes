@@ -42,6 +42,7 @@
               export PATH="$GOBIN:$PATH"
               export SHELL=${pkgs.lib.getExe pkgs.bash}
               export STARSHIP_CONFIG="$PWD/starship.toml"
+              go install github.com/wailsapp/wails/v3/cmd/wails3@v3.0.0
               eval "$(starship init bash)"
             '';
           };
