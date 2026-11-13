@@ -10,7 +10,7 @@
       description = "A Go project template with devShell";
     };
     
-    templates.go-svelte = {
+    templates.wails3 = {
       path = ./wails3;
       description = "A Go & Svelte project template with devShell";
     };
